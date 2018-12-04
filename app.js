@@ -1,20 +1,24 @@
-// play the video after 5 seconds
-setTimeout(() => {
-  document.getElementById('santa-ride').play()
-}, 5000);
-
 window.addEventListener('load', () => {
-  document.getElementById('refreshButton').addEventListener('click', e => {
+  const refreshButton = document.getElementById('refreshButton')
+  const santaRide = document.getElementById('santa-ride')
+
+  refreshButton.addEventListener('click', e => {
     // restart gaze target
     const videoContainer = document.getElementById('videoContainer')
     videoContainer.innerHTML = `<a-videosphere gaze-target src="#santa-ride"></a-videosphere>`
     // restart video
-    const video = document.getElementById('santa-ride')
-    video.pause()
-    video.currentTime = 0
-    video.play()
-    setTimeout(() => {
-    }, 1000);
+    santaRide.pause()
+    santaRide.currentTime = 5
+    santaRide.play()
+  })
+
+
+  // disable ride button
+  santaRide.addEventListener('play', e => {
+    refreshButton.setAttribute('disabled', '')
+  })
+  santaRide.addEventListener('ended', e => {
+    refreshButton.removeAttribute('disabled')
   })
 })
 
