@@ -26,6 +26,17 @@ video, canvas {
   font-size: .8em;
 }
 
+#icon {
+  width: 200px;
+  height: 200px;
+  background: url('assets/360_video.png');
+  background-size: cover;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+}
+
 #refreshButton {
   position: fixed;
   top: 50%;
