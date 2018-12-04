@@ -10,12 +10,16 @@ video, canvas {
 }
 
 #info-block {
-  background: green;
+  /* background: green; */
   width: 340px;
   color: white;
   font-size: 28px;
   padding: 10px;
-  opacity: 0.8;
+}
+
+#info-block[disabled] {
+  background: transparent;
+  opacity: 0;
 }
 
 #info-block .small {
@@ -23,8 +27,10 @@ video, canvas {
 }
 
 #refreshButton {
-  margin-top: 260px;
-  margin-left: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   background: red;
   color: white;
@@ -34,9 +40,6 @@ video, canvas {
   box-shadow:1px 1px 1px rebeccapurple;
 }
 
-#info-block[disabled] {
-  background: transparent;
-}
 
 #info-block[disabled] p {
   display: none;
