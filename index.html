@@ -9,6 +9,7 @@
   <link href="styles.css" rel="stylesheet" type="text/css">
   <script src="https://unpkg.com/aframe"></script>
   <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/webrtc-adapter/out/adapter.js"></script>
   <script src="https://unpkg.com/tracking/build/tracking-min.js"></script>
   <script src="https://unpkg.com/tracking/build/data/face-min.js"></script>
   <script src="https://unpkg.com/dat.gui/build/dat.gui.min.js"></script>
@@ -21,7 +22,7 @@
     <div class="demo-container">
       <video id="video" width="320" height="240" preload autoplay loop muted></video>
       <canvas id="canvas" width="320" height="240"></canvas>
-      <button id="refreshButton">Refresh</button>
+      <div id="refreshButton" class="button" aria-role="button">Ride with Santa</div>
     </div>
   </div>
 
