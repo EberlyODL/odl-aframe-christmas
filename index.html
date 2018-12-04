@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    odl-aframe-christmas
+  </title>
+  <meta name="description" content="odl-aframe-christmas">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="https://unpkg.com/aframe"></script>
+  <script src="https://unpkg.com/aframe-animation-component/dist/aframe-animation-component.min.js"></script>
+  <script src="https://unpkg.com/tracking/build/tracking-min.js"></script>
+  <script src="https://unpkg.com/tracking/build/data/face-min.js"></script>
+  <script src="https://unpkg.com/dat.gui/build/dat.gui.min.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="demo-frame">
+    <div class="demo-container">
+      <video id="video" width="320" height="240" preload autoplay loop muted></video>
+      <canvas id="canvas" width="320" height="240"></canvas>
+      <button id="refreshButton">Refresh</button>
+    </div>
+  </div>
+
+  <div class="window"></div>
+
+  <a-scene>
+    <a-assets>
+      <a-asset id="xmasscene" src="assets/xmasscene1.gltf"></a-asset>
+      <a-asset id="xmass" src="assets/xmass.png"></a-asset>
+      <a-asset id="window" src="assets/window.png"></a-asset>
+      <video loop id="santa-ride" src="assets/santa-ride.mp4"></video>
+    </a-assets>
+
+    <a-entity rotation="0 -90 0" id="videoContainer">
+      <a-videosphere gaze-target src="#santa-ride"></a-videosphere>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>

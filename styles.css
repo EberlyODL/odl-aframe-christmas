@@ -1,0 +1,31 @@
+video, canvas {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+#video {
+  opacity: .5;
+}
+
+#refreshButton {
+  margin-top: 260px;
+  margin-left: 150px;
+}
+
+.demo-frame {
+  position: relative;
+  z-index: 9999;
+}
+
+.window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: url('assets/window.png') no-repeat;
+  background-size: 130%;
+  background-position: 50% 0;
+  width: 100vw;
+  height: 100vh;
+}
