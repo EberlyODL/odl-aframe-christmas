@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  const infoBlock = document.getElementById('info-block')
   const refreshButton = document.getElementById('refreshButton')
   const santaRide = document.getElementById('santa-ride')
 
@@ -15,9 +16,11 @@ window.addEventListener('load', () => {
 
   // disable ride button
   santaRide.addEventListener('play', e => {
+    infoBlock.setAttribute('disabled', '')
     refreshButton.setAttribute('disabled', '')
   })
   santaRide.addEventListener('ended', e => {
+    infoBlock.removeAttribute('disabled')
     refreshButton.removeAttribute('disabled')
   })
 })

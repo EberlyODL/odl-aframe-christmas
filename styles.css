@@ -2,15 +2,25 @@ video, canvas {
   top: 10px;
   left: 10px;
   position: absolute;
+  z-index: 100;
 }
 
 #video {
-  opacity: .5;
+  opacity: .9;
+}
+
+#info-block {
+  background: green;
+  width: 340px;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  opacity: 0.8;
 }
 
 #refreshButton {
   margin-top: 260px;
-  margin-left: 100px;
+  margin-left: 40px;
   display: inline-block;
   background: red;
   color: white;
@@ -18,6 +28,10 @@ video, canvas {
   font-size: 1.2em;
   padding: 1em;
   box-shadow:1px 1px 1px rebeccapurple;
+}
+
+#info-block[disabled] {
+  opacity: 0.2;
 }
 
 .button[disabled] {
