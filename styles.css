@@ -13,30 +13,39 @@ video, canvas {
   background: green;
   width: 340px;
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   padding: 10px;
   opacity: 0.8;
 }
 
+#info-block .small {
+  font-size: .8em;
+}
+
 #refreshButton {
   margin-top: 260px;
-  margin-left: 40px;
+  margin-left: 20px;
   display: inline-block;
   background: red;
   color: white;
   text-shadow: 2px 2px 2px green;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 1em;
   box-shadow:1px 1px 1px rebeccapurple;
 }
 
 #info-block[disabled] {
-  opacity: 0.2;
+  background: transparent;
 }
 
-.button[disabled] {
-  opacity: 0.2;
+#info-block[disabled] p {
+  display: none;
 }
+
+#info-block[disabled] .button {
+  opacity: 0.3;
+}
+
 
 .button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;

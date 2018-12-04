@@ -3,6 +3,11 @@ window.addEventListener('load', () => {
   const refreshButton = document.getElementById('refreshButton')
   const santaRide = document.getElementById('santa-ride')
 
+  santaRide.play()
+  setTimeout(() => {
+    santaRide.pause()
+  }, 2000);
+
   refreshButton.addEventListener('click', e => {
     // restart gaze target
     const videoContainer = document.getElementById('videoContainer')
@@ -17,11 +22,12 @@ window.addEventListener('load', () => {
   // disable ride button
   santaRide.addEventListener('play', e => {
     infoBlock.setAttribute('disabled', '')
-    refreshButton.setAttribute('disabled', '')
   })
   santaRide.addEventListener('ended', e => {
     infoBlock.removeAttribute('disabled')
-    refreshButton.removeAttribute('disabled')
+  })
+  santaRide.addEventListener('pause', e => {
+    infoBlock.removeAttribute('disabled')
   })
 })
 
