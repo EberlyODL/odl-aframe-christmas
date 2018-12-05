@@ -4,6 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "deploy": "surge -d odl-aframe-christmas.surge.sh ."
+    "deploy": "surge -d odl-aframe-tracking.surge.sh ."
   }
 }
