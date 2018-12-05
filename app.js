@@ -14,8 +14,11 @@ window.addEventListener('load', () => {
     videoContainer.innerHTML = `<a-videosphere gaze-target src="#santa-ride"></a-videosphere>`
     // restart video
     santaRide.pause()
-    santaRide.currentTime = 5
+    santaRide.currentTime = 0
     santaRide.play()
+    setTimeout(() => {
+      santaRide.play()
+    }, 1000);
   })
 
 

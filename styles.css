@@ -1,3 +1,25 @@
+header {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  padding: 1vw;
+  background: green;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+header p {
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    font-size: 20px;
+  }
+}
+
 video, canvas {
   top: 10px;
   left: 10px;
@@ -10,7 +32,6 @@ video, canvas {
 }
 
 #info-block {
-  /* background: green; */
   width: 340px;
   color: white;
   font-size: 28px;
@@ -27,8 +48,8 @@ video, canvas {
 }
 
 #icon {
-  width: 200px;
-  height: 200px;
+  width: 20vw;
+  height: 20vw;
   background: url('assets/360_video.png');
   background-size: cover;
   position: fixed;
@@ -101,7 +122,6 @@ video, canvas {
 	position:relative;
 	top:1px;
 }
-
 
 
 .demo-frame {
